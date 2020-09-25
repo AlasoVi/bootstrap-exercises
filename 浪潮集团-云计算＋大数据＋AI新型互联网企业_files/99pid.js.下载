@@ -1,0 +1,29 @@
+// JavaScript Document
+try{
+var nurl=["http://www.inspur.com/lcjtww/443012/444204",
+"http://www.inspur.com/lcjtww/443012/754532",
+"http://www.inspur.com/lcjtww/443012/754452",
+"http://www.inspur.com/lcjtww/443009/443384",
+"http://www.inspur.com/lcjtww/443009/443411",
+"http://www.inspur.com/lcjtww/443009/443415/448579",
+"http://www.inspur.com/lcjtww/443012/444624",
+"http://www.inspur.com/lcjtww/443015"];
+var urls=location.pathname.split("/");
+var nnurl=location.href;
+function getpid(url){
+var _ozprms;
+for(var t in nurl){
+var s=url.indexOf(nurl[t]);
+if(s!=-1 && t>5 && urls.length <=6){
+return _ozprms="pid99="+urls[urls.length-2]+"&cid99="+urls[urls.length-2];
+}else if(s!=-1 && t>5 && urls.length >6){
+return _ozprms="pid99="+urls[urls.length-2]+"&cid99="+urls[5];
+}else if(s!=-1 && t<=5){
+return _ozprms="pid99="+urls[urls.length-2]+"&cid99="+urls[4];
+}else if(s==-1 && t==7){
+return _ozprms="pid99="+urls[urls.length-2]+"&cid99="+urls[urls.length-3];
+}
+}
+}
+var _ozprm=getpid(nnurl);
+}catch(e){}
